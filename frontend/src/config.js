@@ -1,0 +1,2 @@
+export const MAPBOX_TOKEN = 'pk.eyJ1IjoiandpY2tzOTkiLCJhIjoiY21iemtmMWN2MDBoNTJqcHp1b3k1ZHl3bSJ9.SO0flBFSBgETa2_QmzOhQQ';
+export const API_URL = 'http://localhost:5000/api/elections'; // Change if backend is remote 
