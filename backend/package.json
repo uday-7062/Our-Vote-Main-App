@@ -4,7 +4,14 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "chmod +x deploy.sh && ./deploy.sh",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop ourvote-backend",
+    "pm2:restart": "pm2 restart ourvote-backend",
+    "pm2:logs": "pm2 logs ourvote-backend",
+    "pm2:status": "pm2 status"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -12,9 +19,14 @@
     "express": "^4.18.2",
     "mongoose": "^7.0.3",
     "jsonwebtoken": "^9.0.0",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "pm2": "^5.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
   }
 } 
